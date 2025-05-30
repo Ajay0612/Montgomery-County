@@ -1,0 +1,11 @@
+prefix=/Users/ajay/Documents/data science/projects/Retail and warehouse/myvenv
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/Users/ajay/Documents/data science/projects/Retail and warehouse/myvenv/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.4
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

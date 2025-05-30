@@ -1,0 +1,13 @@
+prefix=/Users/ajay/Documents/data science/projects/Retail and warehouse/myvenv
+exec_prefix=/Users/ajay/Documents/data science/projects/Retail and warehouse/myvenv
+libdir=/Users/ajay/Documents/data science/projects/Retail and warehouse/myvenv/lib
+sharedlibdir=/Users/ajay/Documents/data science/projects/Retail and warehouse/myvenv/lib
+includedir=/Users/ajay/Documents/data science/projects/Retail and warehouse/myvenv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
