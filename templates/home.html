@@ -1,0 +1,42 @@
+<html>
+  <body>
+    <div class="login">
+      <h1>Warehouse Sales Prediction</h1>
+
+      <form action="{{ url_for('predict_datapoint') }}" method="post">
+        <h2>Enter Item Details</h2>
+
+        <div class="mb-3">
+          <label class="form-label">Retail Sales</label>
+          <input class="form-control" type="number" name="retail_sales" step="0.01" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Retail Transfers</label>
+          <input class="form-control" type="number" name="retail_transfers" step="0.01" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Item Type</label>
+            <select class="form-control" name="item_type" required>
+              <option selected disabled value="">Select Item Type</option>
+              <option value="WINE">WINE</option>
+              <option value="BEER">BEER</option>
+              <option value="LIQUOR">LIQUOR</option>
+              <option value="STR_SUPPLIES">STR_SUPPLIES</option>
+              <option value="KEGS">KEGS</option>
+            </select>
+          </div>
+          
+
+        <div class="mb-3">
+          <input class="btn btn-primary" type="submit" value="Predict Warehouse Sales" />
+        </div>
+      </form>
+
+      {% if results %}
+      <h2>Predicted Warehouse Sales: {{ results }}</h2>
+      {% endif %}
+    </div>
+  </body>
+</html>
